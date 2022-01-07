@@ -12,10 +12,10 @@ fun repeatedString(s: String, n: Long): Long {
 
     var totalLetterA: Long = 0
     val numberOfLoops = (n / size)
-    for (i in 0 until numberOfLoops) totalLetterA += lettersAOnPhrase
+    totalLetterA = lettersAOnPhrase * numberOfLoops
 
-    val restOfNumberOfLoops = n - (numberOfLoops * size)
-    for (i in 0 until restOfNumberOfLoops) {
+    val remainderOfLoop = n - (numberOfLoops * size)
+    for (i in 0 until remainderOfLoop) {
         if (s[((i % size).toInt())] == letterA) totalLetterA++
     }
 
