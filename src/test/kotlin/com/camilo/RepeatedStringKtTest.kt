@@ -9,7 +9,7 @@ class RepeatedStringKtTest {
     @Test
     fun `it should return 7 with input aba and 10`() {
         val input = "aba"
-//        val input = "abaabaabaa"
+//        val input = "abaabaabaaba"
         val n: Long = 10
         val result = repeatedString(input, n)
         Assertions.assertEquals(7, result)
@@ -34,16 +34,16 @@ class RepeatedStringKtTest {
     }
 
     @Test
-    fun `it should return 4 with kmretata and 20`(){
+    fun `it should return 4 with kmretata and 20`() {
         val input = "kmareta"
-        val n: Long = 20
+        val n: Long = 10
         val result = repeatedString(input, n)
-        Assertions.assertEquals(5, result)
+        Assertions.assertEquals(3, result)
     }
 
 
     @Test
-    fun `it should return 0 with d and 590826798023`(){
+    fun `it should return 0 with d and 590826798023`() {
         val input = "d"
         val n: Long = 590826798023
         val result = repeatedString(input, n)
@@ -51,7 +51,7 @@ class RepeatedStringKtTest {
     }
 
     @Test
-    fun `it should return 164280 with gfcaaaecbg and 547602`(){
+    fun `it should return 164280 with gfcaaaecbg and 547602`() {
         val input = "gfcaaaecbg"
         val n: Long = 547602
         val result = repeatedString(input, n)
@@ -59,21 +59,20 @@ class RepeatedStringKtTest {
     }
 
     @Test
-    fun `it should return 2 with ababa and 3`(){
+    fun `it should return 2 with ababa and 3`() {
         val input = "ababa"
         val n: Long = 3
         val result = repeatedString(input, n)
         Assertions.assertEquals(2, result)
     }
 
-//   FIXME Fix the time limit exceeded
-//   @Test
-//    fun `it should return 69801196944 with udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps and 872514961806`(){
-//        val input = "udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps"
-//        val n: Long = 872514961806
-//        val result = repeatedString(input, n)
-//        Assertions.assertEquals(69801196944, result)
-//    }
 
-
+    @Test
+    fun `it should return 69801196944 with udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps and 872514961806`() {
+        val input =
+            "udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps"
+        val n: Long = 872514961806
+        val result = repeatedString(input, n)
+        Assertions.assertEquals(69801196944, result)
+    }
 }
