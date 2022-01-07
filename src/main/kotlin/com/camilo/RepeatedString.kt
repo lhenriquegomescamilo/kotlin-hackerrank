@@ -10,7 +10,7 @@ fun repeatedString(s: String, n: Long): Long {
         if(s[((i % size).toInt())] == letterA) totalLetterA++
     }
 
-    return (totalLetterA)
+    return totalLetterA
 }
 /*
 1st version of code
