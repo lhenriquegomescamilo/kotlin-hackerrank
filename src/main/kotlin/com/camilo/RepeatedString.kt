@@ -6,14 +6,14 @@ fun repeatedString(s: String, n: Long): Long {
     if (size == 1 && s[0] != letterA) return 0
     if (size == 1) return n
 
-    val lettersAOnPhrase = s.count { it == letterA }
+    var lettersAOnPhrase = 0
+    for(i in 0 until size) if(s[i] == letterA) lettersAOnPhrase++
 
 
     var totalLetterA: Long = 0
     val numberOfLoops = (n / size)
-    for (i in 0 until numberOfLoops) {
-        totalLetterA += lettersAOnPhrase
-    }
+    for (i in 0 until numberOfLoops) totalLetterA += lettersAOnPhrase
+
     val restOfNumberOfLoops = n - (numberOfLoops * size)
     for (i in 0 until restOfNumberOfLoops) {
         if (s[((i % size).toInt())] == letterA) totalLetterA++

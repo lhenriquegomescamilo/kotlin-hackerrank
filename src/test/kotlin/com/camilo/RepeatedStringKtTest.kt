@@ -71,7 +71,7 @@ class RepeatedStringKtTest {
     fun `it should return 69801196944 with udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps and 872514961806`() {
         val input =
             "udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps"
-        val n: Long = 872514961806
+        val n: Long = 872_514_961_806
         val result = repeatedString(input, n)
         Assertions.assertEquals(69801196944, result)
     }
