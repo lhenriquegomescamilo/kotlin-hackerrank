@@ -7,7 +7,7 @@ fun repeatedString(s: String, n: Long): Long {
     if (size == 1) return n
 
     var lettersAOnPhrase = 0
-    for(i in 0 until size) if(s[i] == letterA) lettersAOnPhrase++
+    for (i in 0 until size) if (s[i] == letterA) lettersAOnPhrase++
 
 
     var totalLetterA: Long = 0
