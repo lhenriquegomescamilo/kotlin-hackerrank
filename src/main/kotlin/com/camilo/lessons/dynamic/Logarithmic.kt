@@ -14,14 +14,17 @@ class Logarithmic {
      *
      */
     fun logarithmicRecursionsOf(n: Long, incrementer: Long = 0): Long {
-        if (n == 1L) return incrementer
-        return logarithmicRecursionsOf(Math.floorDiv(n, 2), incrementer + 1)
+        if (n <= 1L) return incrementer
+
+        if ((n % 2) == 0L) return logarithmicRecursionsOf(n / 2, incrementer + 1)
+
+        return logarithmicRecursionsOf(1, incrementer)
     }
 
     fun logarithmicForLoopOf(n: Long): Long {
         var interactions: Long = 0
         var counter = n
-        while( counter % 2 == 0L ) {
+        while (counter % 2 == 0L) {
             counter /= 2
             interactions++
         }
