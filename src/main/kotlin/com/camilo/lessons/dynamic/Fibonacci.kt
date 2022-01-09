@@ -10,9 +10,9 @@ class Fibonacci {
      * The time complexity is O(2^n) and some operations like fib(2) are repeated 3 times and fib(3) are repeated 2 time,
      *  they are lost computate
      */
-    fun fibbonacciRecurson(n: Long): Long =
+    fun fibbonacciRecursion(n: Long): Long =
         if (n == 1L || n == 2L) 1L
-        else fibbonacciRecurson(n - 1) + fibbonacciRecurson(n - 2)
+        else fibbonacciRecursion(n - 1) + fibbonacciRecursion(n - 2)
 
 
     /**
@@ -41,5 +41,24 @@ class Fibonacci {
 
         memo[n] = result
         return result
+    }
+
+    /**
+     *  The complexity of this function is: O(n)
+     *   because the array bottonUp are defined once time.
+     */
+    fun fibonnaciBottomUp(n: Int): Int {
+        if (n == 1 || n == 2) {
+            return 1
+        }
+        val bottomUp = IntArray(n)
+        bottomUp[0] = 1
+        bottomUp[1] = 1
+
+        for (i in 2 until n) {
+            bottomUp[i] = bottomUp[i - 1] + bottomUp[i - 2]
+        }
+
+        return bottomUp[n - 1]
     }
 }
