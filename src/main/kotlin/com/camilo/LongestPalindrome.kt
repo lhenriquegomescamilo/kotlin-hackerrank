@@ -27,6 +27,7 @@ class LongestPalindrome {
         if (s.isEmpty() || l > r) return 0
         var left = l
         var right = r
+        //
         while (left >= 0 && right < s.length && s[left] == s[right]) {
             left--
             right++

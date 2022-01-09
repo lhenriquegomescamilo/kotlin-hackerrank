@@ -54,4 +54,17 @@ class LongestPalindromeTest {
         val result = LongestPalindrome().longestPalindrome(input)
         Assertions.assertEquals("bacab", result)
     }
+
+    @Test
+    fun `it should return abba when the input is abba`() {
+        val input = "abba"
+        val result = LongestPalindrome().longestPalindrome(input)
+        Assertions.assertEquals("abba", result)
+    }
+    @Test
+    fun `it should return aba when the input is aba`() {
+        val input = "aba"
+        val result = LongestPalindrome().longestPalindrome(input)
+        Assertions.assertEquals("aba", result)
+    }
 }
