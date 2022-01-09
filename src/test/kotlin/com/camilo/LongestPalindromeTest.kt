@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test
 class LongestPalindromeTest {
 
     @Test
-    fun `it should return aba when the input is aba`() {
+    fun `it should return aba when the input is aba or bab`() {
         val input = "babad"
         val result = LongestPalindrome().longestPalindrome(input)
-        Assertions.assertEquals("aba", result)
+        Assertions.assertTrue(result == "aba" || result == "bab")
     }
 
     @Test
@@ -39,5 +39,19 @@ class LongestPalindromeTest {
         val input = "abb"
         val result = LongestPalindrome().longestPalindrome(input)
         Assertions.assertEquals("bb", result)
+    }
+
+    @Test
+    fun `it should return aca when the input is aacabdkacaa`() {
+        val input = "aacabdkacaa"
+        val result = LongestPalindrome().longestPalindrome(input)
+        Assertions.assertEquals("aca", result)
+    }
+
+    @Test
+    fun `it should return bab when the input is bacabab`() {
+        val input = "bacabab"
+        val result = LongestPalindrome().longestPalindrome(input)
+        Assertions.assertEquals("bacab", result)
     }
 }
