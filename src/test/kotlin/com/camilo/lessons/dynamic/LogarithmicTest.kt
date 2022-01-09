@@ -25,4 +25,20 @@ class LogarithmicTest {
         val result = Logarithmic().logarithmicForLoopOf(n)
         assertEquals(4, result)
     }
+
+    @Test
+    fun `it should return 2 to logarithmic of 100 using the loop`() {
+        val n: Long = 100
+        val result = Logarithmic().logarithmicForLoopOf(n)
+        assertEquals(2, result)
+    }
+
+
+    @Test
+    fun `it should return 2 to input logarithmic of 100 using the recursion`() {
+        val n: Long = 100
+        val result = Logarithmic().logarithmicRecursionsOf(n)
+        assertEquals(2, result)
+    }
+
 }
