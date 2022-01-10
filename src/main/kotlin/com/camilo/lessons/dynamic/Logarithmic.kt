@@ -31,4 +31,21 @@ class Logarithmic {
         return interactions
 
     }
+
+    fun nLogN(n: Long): Long {
+        var interactions: Long = 0
+        var currentCounter = n
+        while(currentCounter > 0) {
+            var counter = n
+            while((counter % 2) == 0L){
+                interactions++
+                counter /= 2
+            }
+            currentCounter--
+
+
+        }
+        return interactions
+
+    }
 }

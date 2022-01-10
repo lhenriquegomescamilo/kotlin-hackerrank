@@ -41,4 +41,11 @@ class LogarithmicTest {
         assertEquals(2, result)
     }
 
+    @Test
+    fun `it should return 8 to n=4 whe run the function  n log n`() {
+        val n: Long = 4
+        val result = Logarithmic().nLogN(n)
+        assertEquals(8, result)
+    }
+
 }
