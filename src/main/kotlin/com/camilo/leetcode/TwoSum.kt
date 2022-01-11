@@ -1,4 +1,4 @@
-package com.camilo
+package com.camilo.leetcode
 
 class TwoSum {
     fun twoSum(nums: IntArray, target: Int): IntArray {

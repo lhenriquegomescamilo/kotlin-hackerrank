@@ -1,4 +1,4 @@
-package com.camilo
+package com.camilo.leetcode
 
 fun miniMaxSum(arr: Array<Int>): String {
     val first = arr[0]

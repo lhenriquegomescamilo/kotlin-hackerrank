@@ -1,4 +1,4 @@
-package com.camilo
+package com.camilo.leetcode
 
 fun repeatedString(s: String, n: Long): Long {
     val letterA = 'a'

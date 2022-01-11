@@ -1,5 +1,6 @@
 package com.camilo
 
+import com.camilo.leetcode.miniMaxSum
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

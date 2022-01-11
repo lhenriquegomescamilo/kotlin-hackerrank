@@ -1,4 +1,4 @@
-package com.camilo
+package com.camilo.leetcode
 
 class LongestSubstring {
     fun lengthOfLongestSubstring(s: String): Int {

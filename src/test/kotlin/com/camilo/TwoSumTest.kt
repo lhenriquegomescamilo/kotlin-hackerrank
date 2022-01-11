@@ -1,5 +1,6 @@
 package com.camilo
 
+import com.camilo.leetcode.TwoSum
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 

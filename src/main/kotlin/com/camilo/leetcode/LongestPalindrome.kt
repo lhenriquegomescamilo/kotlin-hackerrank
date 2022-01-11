@@ -1,4 +1,4 @@
-package com.camilo
+package com.camilo.leetcode
 
 class LongestPalindrome {
     /**
