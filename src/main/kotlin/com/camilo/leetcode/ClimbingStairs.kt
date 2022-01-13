@@ -26,7 +26,7 @@ class ClimbingStairs {
         if (memo.containsKey(n)) return memo[n]!!
         if (n < 0) return 0
         if (n == 1 || n == 0) return 1
-        val result = memoizeSolution(n - 1) + memoizeSolution(n - 2)
+        val result = memoizeSolution(n - 1, memo) + memoizeSolution(n - 2, memo)
         memo[n] = result
         return result
     }
