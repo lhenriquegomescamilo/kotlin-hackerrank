@@ -19,10 +19,25 @@ internal class PascalTriangleIITest {
         assertEquals(listOf(1), row)
     }
 
+
     @Test
-    fun `it should return a listOf(1,1) that represent the row index 0`() {
+    fun `it should return a listOf(1,3,3,1) that represent the row index 3 more faster`() {
+        val rowIndex = 3
+        val row = PascalTriangleII().getRowMoreFaster(rowIndex)
+        assertEquals(listOf(1, 3, 3, 1), row)
+    }
+
+    @Test
+    fun `it should return a listOf(1) that represent the row index 0 more faster`() {
         val rowIndex = 0
-        val row = PascalTriangleII().getRow(rowIndex)
+        val row = PascalTriangleII().getRowMoreFaster(rowIndex)
+        assertEquals(listOf(1), row)
+    }
+
+    @Test
+    fun `it should return a listOf(1,1) that represent the row index 0 more faster`() {
+        val rowIndex = 0
+        val row = PascalTriangleII().getRowMoreFaster(rowIndex)
         assertEquals(listOf(1), row)
     }
 }
