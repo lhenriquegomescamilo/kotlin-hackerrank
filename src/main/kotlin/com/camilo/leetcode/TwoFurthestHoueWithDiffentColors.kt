@@ -9,17 +9,19 @@ class TwoFurthestHoueWithDiffentColors {
      */
     fun maxDistance(colors: IntArray): Int {
         var max = 0
-        val startPointer = 0
-        val endPointer = colors.size - 1
+        val right = 0
+        val rightColor = colors[right]
+        val left = colors.size - 1
+        val leftColor = colors[left]
         for (i in colors.indices) {
             val currentValue = colors[i]
-            val startPointerColor = colors[startPointer]
-            if (currentValue != startPointerColor) {
-                max = Math.max(max, abs(startPointer - i))
+
+            if (currentValue != rightColor) {
+                max = Math.max(max, abs(right - i))
             }
-            val endPointerColor = colors[endPointer]
-            if (currentValue != endPointerColor) {
-                max = Math.max(max, abs(endPointer - i))
+
+            if (currentValue != leftColor) {
+                max = Math.max(max, abs(left - i))
             }
         }
         return max
