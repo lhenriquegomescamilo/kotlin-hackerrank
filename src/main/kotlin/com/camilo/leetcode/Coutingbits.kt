@@ -20,8 +20,7 @@ class Coutingbits {
 
         // Time complexity if O(n)
         for(i in 0 until n + 1) {
-            val firstResult = output[i shr 1]
-            output[i] = firstResult + i % 2
+            output[i] = output[i shr 1] + i % 2
 
         }
         return output
