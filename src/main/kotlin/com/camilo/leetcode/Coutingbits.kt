@@ -17,6 +17,9 @@ class Coutingbits {
         return output
     }
 
+    /**
+     * Inspired by https://leetcode.com/problems/counting-bits/discuss/1683356/C%2B%2B-or-Two-Solutions
+     */
     fun countBitsMoreDynamicProgramming(n: Int): IntArray {
         // Space completixy is O(n)
         val output = IntArray(n + 1)
