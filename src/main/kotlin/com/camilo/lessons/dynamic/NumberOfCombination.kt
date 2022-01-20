@@ -24,7 +24,14 @@ class NumberOfCombination {
         return null
     }
 
-
+    /**
+     * m = targetSum
+     * n = numbers.length
+     *
+     * ## Memoized
+     * time: O(n * m^2)
+     * space: O(m^2)
+     */
     fun howSumBruteForceMemoization(
         targetSum: Int,
         numbers: List<Int>,
