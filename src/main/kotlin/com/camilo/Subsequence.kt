@@ -6,23 +6,19 @@ package com.camilo
  * Output: true
  */
 class Subsequence {
-
-    fun isSubsequence(compare: String, source: String): Boolean {
-        val map = LinkedHashMap<Int, Char>(compare.length)
-
-        for (i in compare.indices) {
-            for (j in i until source.length) {
-                if (compare[i] == source[j]) {
-                    map[j] = source[j]
-                }
-            }
+    /**
+     * Time: O(n)
+     * Space: O(1)
+     */
+    fun isSubsequence(s: String, t: String): Boolean {
+        var i = 0
+        var j = 0
+        while (i < s.length && j < t.length) {
+            val first = s[i]
+            val second = t[j]
+            if (first == second) i++
+            j++
         }
-        val mapSorted = map.toSortedMap()
-        val builder = StringBuilder()
-        for((_, v) in mapSorted) {
-            if(!builder.contains(v)) builder.append(v)
-
-        }
-        return compare == builder.toString()
+        return i == s.length
     }
 }
