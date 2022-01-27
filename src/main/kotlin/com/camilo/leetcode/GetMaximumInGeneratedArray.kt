@@ -14,11 +14,11 @@ class GetMaximumInGeneratedArray {
         var counter = 1
         var max = 0
         for (i in 2 until n step 2) {
-            val last = nums[counter]
-            nums[(2 * counter)] = last
-            val next = nums[counter] + nums[counter + 1]
-            nums[(2 * counter + 1)] = next
-            max = Math.max(max, Math.max(last, next))
+            val current = nums[counter]
+            nums[(2 * counter)] = current
+            val currentPlusNext = nums[counter] + nums[counter + 1]
+            nums[(2 * counter + 1)] = currentPlusNext
+            max = Math.max(max, Math.max(current, currentPlusNext))
             counter++
         }
         return max
