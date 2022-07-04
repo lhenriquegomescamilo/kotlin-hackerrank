@@ -12,12 +12,10 @@ class MaxConsecutiveOnes {
         var totalConsecutive = 0
         var maxConsecutive = 0
         var temp = nums[0]
-        for (index in 1 until nums.size) {
-            val num = nums[index]
-            if (num != temp) {
-                totalConsecutive = 0
-            }
+        for (num in nums) {
+            if (num != temp) totalConsecutive = 0
             totalConsecutive++
+            if (num == 0 && temp == 0) totalConsecutive = 0
             temp = num
             maxConsecutive = Math.max(maxConsecutive, totalConsecutive)
         }
