@@ -31,9 +31,9 @@ class DuplicateZeros {
      * Space Complexity: O(n)
      */
     fun duplicateZerosNoNewArray(arr: IntArray): IntArray {
-        var pointer = 0
+        var pointer: Int
         for (i in arr.lastIndex downTo 0) {
-            if (arr[i] == 0 && i < arr.lastIndex - 2) {
+            if (arr[i] == 0 && i < arr.lastIndex - 1) {
                 var temp = arr[i + 1]
                 arr[i + 1] = 0
                 pointer = i + 2
@@ -46,9 +46,6 @@ class DuplicateZeros {
 
             }
         }
-
         return arr
-
-
     }
 }
