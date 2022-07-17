@@ -8,15 +8,17 @@ class RemoveElement {
     fun removeElement(nums: IntArray, value: Int): Int {
         var leftPointer = 0
         var rightPointer = nums.lastIndex
-        while (leftPointer < rightPointer) {
-
-            if (nums[rightPointer] == value) rightPointer--
+        while (leftPointer <= rightPointer) {
+            if (nums[rightPointer] == value) {
+                rightPointer--
+            }
 
             if (nums[leftPointer] == value) {
-                val leftToRight = nums[rightPointer]
-                nums[rightPointer] = nums[leftPointer]
-                nums[leftPointer] = leftToRight
-
+                val left = nums[leftPointer]
+                val right = nums[rightPointer]
+                nums[rightPointer] = left
+                nums[leftPointer] = right
+                rightPointer--
             }
             leftPointer++
         }

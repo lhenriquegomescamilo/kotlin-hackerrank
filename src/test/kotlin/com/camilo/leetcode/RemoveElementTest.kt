@@ -23,4 +23,13 @@ internal class RemoveElementTest {
         assertArrayEquals(intArrayOf(0, 1, 4, 0, 3, 2, 2, 2), input)
         assertEquals(5, output)
     }
+
+    @Test
+    fun `it should return 4 with input 4,2,0,2,2,1,4,4,1,4,3,2`() {
+        val input = intArrayOf(4, 2, 0, 2, 2, 1, 4, 4, 1, 4, 3, 2)
+        val valueToRemove = 4
+        val output = RemoveElement().removeElement(input, valueToRemove)
+        assertEquals(8, output)
+        assertArrayEquals(intArrayOf(2, 2, 0, 2, 2, 1, 3, 1, 4, 4, 4, 4), input)
+    }
 }
