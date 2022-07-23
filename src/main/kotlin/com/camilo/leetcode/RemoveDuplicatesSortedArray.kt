@@ -5,29 +5,19 @@ package com.camilo.leetcode
  */
 class RemoveDuplicatesSortedArray {
     /**
-     * Input: nums = [1,1,2]
-     * Output: 2, nums = [1,2,_]
-     * Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+     * Input: nums = [0,0,1,1,1,2,2,3,3,4]
+     * Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+     * Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
      * It does not matter what you leave beyond the returned k (hence they are underscores).
      */
     fun removeDuplicates(nums: IntArray): Int {
-        var storeLastNumber = -1
-        var counter = 1
-        for (index in nums.indices) {
-
-            if (nums[index] == storeLastNumber && index + 1 < nums.size) {
-                val nextNumber = nums[index + 1]
-                val currentNumber = nums[index]
-                nums[index] = nextNumber
-                nums[index + 1] = currentNumber
-
+        var left = 1
+        for (right in 1 until nums.size) {
+            if (nums[right - 1] != nums[right]) {
+                nums[left] = nums[right]
+                left++
             }
-            storeLastNumber = nums[index]
-            if (index > 0 && nums[index - 1] <= nums[index]) counter++
-
-
         }
-
-        return counter
+        return left
     }
 }
