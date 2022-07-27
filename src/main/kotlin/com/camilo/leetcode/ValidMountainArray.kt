@@ -6,28 +6,22 @@ package com.camilo.leetcode
 class ValidMountainArray {
 
     fun validMountainArray(arr: IntArray): Boolean {
-        val middle = arr.lastIndex / 2
-        var left = 1
-        var last = arr.last()
-        for (i in arr.lastIndex downTo (middle + 1)) {
-            val currentNumber = arr[i]
-            if (last < currentNumber) {
-                left++
+        if (arr.size <= 2) return false
+
+        var leftIndex = 0
+        var timesDown = 0
+        var isUp = false
+        for (i in 1..arr.lastIndex) {
+            isUp = arr[leftIndex] < arr[i]
+            if (!isUp) {
+                timesDown++
             }
-            last = currentNumber
+
+            if ((timesDown > 0 && isUp ) || arr[leftIndex] == arr[i]) return false
+            leftIndex++
         }
 
-        last = arr.first()
-        var right = 1
-        for (i in 0..middle) {
-            val currentNumber = arr[i]
-            if (last < currentNumber) {
-                right++
-            }
-            last = currentNumber
-        }
-
-        return right + left == arr.size && arr.size > 2
+        return !isUp && timesDown > 0 && timesDown != (arr.size - 1)
     }
 
 }
