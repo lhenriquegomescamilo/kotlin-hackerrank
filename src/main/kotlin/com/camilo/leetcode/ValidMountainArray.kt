@@ -15,10 +15,7 @@ class ValidMountainArray {
         var isUp = false
         for ((leftIndex, i) in (1..arr.lastIndex).withIndex()) {
             isUp = arr[leftIndex] < arr[i]
-            if (!isUp) {
-                timesDown++
-            }
-
+            if (!isUp) timesDown++
             if ((timesDown > 0 && isUp ) || arr[leftIndex] == arr[i]) return false
         }
 
