@@ -10,7 +10,7 @@ class ProductArrayExceptSelfTest {
     @Test
     fun `it should return 24,12,8,6 for input 1,2,3,4`() {
         val input = intArrayOf(1, 2, 3, 4)
-        val output = ProductArrayExceptSelf().productExceptSelf(input)
+        val output = ProductArrayExceptSelf().produceExpectedSelfLinearMemory(input)
         val expected = intArrayOf(24, 12, 8, 6)
         Assertions.assertArrayEquals(expected, output)
     }

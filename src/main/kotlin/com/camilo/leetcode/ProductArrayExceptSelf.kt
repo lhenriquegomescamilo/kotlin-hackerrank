@@ -33,4 +33,20 @@ class ProductArrayExceptSelf {
         }
         return output.toIntArray()
     }
+
+    fun produceExpectedSelfLinearMemory(nums: IntArray): IntArray {
+        val output = Array(nums.size) { 0 }
+        var prefix = 1
+        for (i in 0..nums.lastIndex) {
+            output[i] = prefix
+            prefix *= nums[i]
+        }
+
+        var postfix = 1
+        for (i in nums.lastIndex downTo 0) {
+            output[i] *= postfix
+            postfix *= nums[i]
+        }
+        return output.toIntArray()
+    }
 }
